@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaCity - Dashboard</title>
+    <link rel="stylesheet" href="../css/estudiante.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-graduation-cap"></i>
+                Mi Boletín
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item"><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="#"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+                    <li class="nav-item active"><a href="#"><i class="fas fa-clipboard-list"></i> Actividades</a></li>
+                    <li class="nav-item"><a href="#"><i class="fas fa-book"></i> Material de Clase</a></li>
+                    <li class="nav-item"><a href="#"><i class="fas fa-user-circle"></i> Mi perfil</a></li>
+                    <li class="nav-item"><a href="salir.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-path">
+                    <i class="fas fa-chalkboard-teacher"></i> Mi Boletín
+                </div>
+                    <a href="acerca.html" class="feedback-button">
+                        <i class="fas fa-star"></i> Nosotros
+                    </a>
+            </header>
+
+            <div class="module-grid">
+                <div class="module-card dark-green-bg">
+                    <p class="card-title">Nombre del estudiante</p>
+                    <p class="card-info">TI</p>
+                    <p class="card-info">Mi Boletín</p>
+                </div>
+
+                <div class="module-card light-bg">
+                    <h3 class="card-title">Descargar archivo con mis calificaciones</h3>
+                    <select class="form-select">
+                        <option>Primer Periodo</option>
+                        <option>Segundo Periodo</option>
+                        <option>Tercer Periodo</option>
+                    </select>
+                    <button class="btn btn-accent">Descargar</button>
+                </div>
+
+                <div class="module-card dark-green-bg">
+                    <i class="fas fa-file-pdf card-icon"></i>
+                    <p class="card-title">Archivo Tipo PDF</p>
+                    <button class="btn btn-light-inverted">Ver</button>
+                </div>
+            </div>
+
+            <section class="tasks-section">
+                <h2>Tareas siguientes</h2>
+                <div class="alert-message">
+                    <i class="fas fa-info-circle"></i>
+                    "No hay tareas pendientes en Mi Boletín. Sin embargo, te recomendamos verificar si tus maestros te han asignado otras tareas que no hayan subido todavía."
+                </div>
+            </section>
+        </main>
+    </div>
+    
+        <main class="main-content">
+            <header class="main-header">
+                <button id="menu-toggle" class="menu-toggle-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="header-path">
+                    <i class="fas fa-chalkboard-teacher"></i> Mi Boletín
+                </div>
+                <a href="acerca.html" class="feedback-button">
+                    <i class="fas fa-star"></i> Nosotros
+                </a>
+            </header>
+
+        </main>
+    </div>
+</body>
+</html>
+</body>
+</html>

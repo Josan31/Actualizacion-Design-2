@@ -1,0 +1,77 @@
+/* -------------------------------------- */
+/* 1. Variables y Reset (Mismo que el del Estudiante) */
+/* -------------------------------------- */
+:root {
+    --color-primary: #002244;       /* Azul oscuro */
+    --color-accent: #3A8DFF;        /* Azul brillante */
+    --color-secondary-bg: #F4F7FB;  /* Fondo gris claro */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-success: #1d9b6c;       /* Verde para módulos específicos */
+    --color-warning: #ffc107;       /* Amarillo para alertas de advertencia */
+
+    --border-radius: 10px;
+    --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-secondary-bg);
+    color: var(--color-text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-text-light);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.task-item span {
+    font-weight: 500;
+}
+
+.task-item i {
+    color: var(--color-accent);
+    margin-right: 10px;
+}
+
+.btn-small {
+    padding: 8px 12px;
+    font-size: 0.85em;
+}
+
+/* Alerta de Advertencia */
+.warning-alert {
+    background-color: #fffbe6; /* Fondo amarillo muy claro */
+    color: #856404; /* Texto marrón/oscuro */
+    border-left: 5px solid var(--color-warning);
+    margin-bottom: 25px;
+}
+
+.warning-alert i {
+    color: var(--color-warning);
+}
+
+/* -------------------------------------- */
+/* 3. Media Queries para el Toggle (Mismo que el del Estudiante) */
+/* -------------------------------------- */
+/* Asegúrate de que las reglas para .sidebar, .sidebar.open y el botón de menú estén en este archivo. */

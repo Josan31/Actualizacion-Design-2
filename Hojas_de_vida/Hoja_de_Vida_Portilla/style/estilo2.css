@@ -1,0 +1,49 @@
+ /* este es el ejecutable del proyecto palmira econews, plataforma de informacion ambiental  */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Encabezado */
+nav h2 {
+    font-weight: bold;
+    color: #2b7a2f;
+}
+
+/* Títulos */
+h3 {
+    color: #2b7a2f;
+    font-weight: bold;
+}
+
+/* Tarjetas de noticias */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #1e6021;
+    font-weight: bold;
+}
+
+/* Botones */
+.btn-success {
+    background-color: #2b7a2f;
+    border-color: #2b7a2f;
+}
+
+.btn-success:hover {
+    background-color: #245f28;
+}
+
+/* Footer */
+footer {
+    color: #2b7a2f;
+    font-weight: bold;
+}
