@@ -142,7 +142,8 @@ body {
     max-width: 100%;
     text-align: center;
     position: relative;
-    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    width: 100%;
+    transition: all 0.3s ease; /* Transición añadida */
 }
 
 .programming-svg {
@@ -154,6 +155,14 @@ body {
     margin-top: 25px;
     position: relative;
     z-index: 2;
+    transition: all 0.3s ease; /* Transición para la imagen */
+    filter: drop-shadow(0 4px 8px rgba(0, 51, 102, 0.1)); /* Sombra sutil inicial */
+}
+
+/* Efecto hover en el contenedor */
+.svg-container:hover .programming-svg {
+    transform: translateY(-8px); /* Elevación al hover */
+    filter: drop-shadow(0 15px 30px rgba(0, 51, 102, 0.15)); /* Sombra más pronunciada */
 }
 
 /* Fondo decorativo detrás de la imagen */
@@ -161,17 +170,25 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    left: 60%; /* Mueve un 10% a la derecha */
+    left: 60%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 200%;
     background-image: url('../img/abstract-blue-circle-shape-funky.png');
-    background-size: 140% auto; /* Controla tamaño aquí */
+    background-size: 140% auto;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.3;
     z-index: 1;
     filter: brightness(1.1);
+    transition: all 0.3s ease; /* Transición para el fondo */
+}
+
+/* Efecto en el fondo al hover */
+.svg-container:hover::before {
+    opacity: 0.4; /* Fondo un poco más visible */
+    filter: brightness(1.2); /* Un poco más brillante */
+    transform: translate(-50%, -50%) scale(1.05); /* Ligero zoom */
 }
 
 /* =======================================
@@ -440,7 +457,6 @@ body {
     padding: 60px 20px;
     background: #ffffff;
     text-align: center;
-    overflow-x: auto;
 }
 
 .team-section h1 {
@@ -459,35 +475,36 @@ body {
     display: flex;
     justify-content: center;
     gap: 38px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Cambiado de nowrap a wrap */
     padding-bottom: 15px;
-    min-width: min-content;
 }
 
-/* TARJETA */
+/* TARJETA - CON LA MISMA ANIMACIÓN */
 .team-card {
-    background: #f8fafc;
-    width: 240px;       /* Antes 280 */
-    min-width: 240px;
+    background: #f8fafc; /* Mismo fondo inicial */
+    width: 240px;
     padding: 20px 18px;
     border-radius: 14px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    transition: transform .25s ease, box-shadow .25s ease;
+    transition: all 0.3s ease; /* Cambiado a 'all' para animar todo */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: 1px solid #e9ecef; /* Borde sutil añadido */
 }
 
 .team-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    transform: translateY(-10px); /* Más elevación como features */
+    box-shadow: 0 15px 30px rgba(0, 51, 102, 0.1); /* Sombra más pronunciada */
+    background: #ffffff; /* Fondo blanco al hover */
+    border-color: #4A90E2; /* Borde azul al hover */
 }
 
 /* IMAGEN */
 .team-card img {
     width: 100%;
-    height: 190px;     /* Antes 230 */
+    height: 190px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 12px;
@@ -542,17 +559,6 @@ body {
     box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 }
 
-/* ICONOS BOTÓN */
-.team-btn.with-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.team-btn i {
-    margin-right: 8px;
-}
-
 /* =====================================
    ======== SECCIÓN DE CONTACTO ========
    ===================================== */
@@ -588,17 +594,21 @@ body {
     gap: 30px;
 }
 
+/* TARJETA DE CONTACTO - CON LA MISMA ANIMACIÓN */
 .contact-card {
-    background: #f8fafc;
+    background: #f8fafc; /* Mismo fondo inicial */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 51, 102, 0.1);
-    transition: transform .3s, box-shadow .3s;
+    transition: all 0.3s ease; /* Cambiado a 'all' */
+    border: 1px solid #e9ecef; /* Borde sutil añadido */
 }
 
 .contact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 51, 102, 0.15);
+    transform: translateY(-10px); /* Misma elevación que features */
+    box-shadow: 0 15px 30px rgba(0, 51, 102, 0.1); /* Sombra idéntica */
+    background: #ffffff; /* Fondo blanco al hover */
+    border-color: #4A90E2; /* Borde azul al hover */
 }
 
 .contact-card i {
