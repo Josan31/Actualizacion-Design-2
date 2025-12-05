@@ -144,7 +144,7 @@ body {
 
 .programming-svg {
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
     height: auto;
     display: block;
     object-fit: contain;
@@ -330,6 +330,83 @@ body {
 
 .highlight span {
     font-size: 1rem;
+}
+
+/* ========================================
+   ============ SECCIÓN CARACTERÍSTICAS ====
+   ======================================== */
+
+.features-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-container h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.features-subtitle {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: #f8fafc;
+    padding: 30px 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 51, 102, 0.1);
+    background: #ffffff;
+    border-color: #4A90E2;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #4A90E2;
+    margin-bottom: 20px;
+    background: rgba(74, 144, 226, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.feature-card h3 {
+    color: #003366;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: #555;
+    line-height: 1.6;
 }
 
 /* ===================================
