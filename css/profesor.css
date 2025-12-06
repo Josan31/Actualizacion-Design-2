@@ -299,3 +299,48 @@ a {
         width: 250px;
     }
 }
+
+/* ================================
+   ====== Sidebar Header Activo ======
+   ================================ */
+
+.sidebar-header {
+    padding: 20px 25px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header.active {
+    background-color: #3A8DFF;
+    color: #ffffff;
+    border-left: 5px solid white;
+    padding-left: 20px;
+}
+
+/* Asegurar que el active del header sobrescriba el hover */
+.sidebar-header.active:hover {
+    background-color: #3A8DFF;
+}
+
+/* ================================
+   ====== Contenido Dinámico ======
+   ================================ */
+
+#main-content {
+    transition: opacity 0.3s ease;
+}
