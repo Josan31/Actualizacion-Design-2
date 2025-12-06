@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Boletín - Panel de Profesor</title>
-    <link rel="stylesheet" href="../Profesor/css_profesor/profesor.css">
+    <link rel="stylesheet" href="../Docente/CSS_Docente/profesor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="page-container">
         <aside class="sidebar" id="sidebar">
-            <a href="index_profesor.html" class="sidebar-header active" id="boletin-header">
+            <!-- IMPORTANTE: Quitar "active" del HTML inicial -->
+            <a href="index_profesor.html" class="sidebar-header" id="boletin-header">
                 <i class="fas fa-chalkboard-teacher"></i>
                 Mi Boletín
             </a>
             <nav class="sidebar-nav">
                 <ul>
-                    <li class="nav-item"><a href="../profesor_pages/inicio_profesor.html"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li class="nav-item"><a href="mis_clases.html"><i class="fas fa-users"></i> Mis Clases</a></li>
+                    <!-- IMPORTANTE: Quitar "active" del HTML inicial -->
+                    <li class="nav-item"><a href="inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="clases.html"><i class="fas fa-users"></i> Mis Clases</a></li>
                     <li class="nav-item"><a href="calificaciones.html"><i class="fas fa-file-alt"></i> Calificaciones</a></li>
-                    <li class="nav-item"><a href="subir_material.html"><i class="fas fa-upload"></i> Subir Material</a></li>
+                    <li class="nav-item"><a href="material.html"><i class="fas fa-upload"></i> Subir Material</a></li>
                     <li class="nav-item"><a href="agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
-                    <li class="nav-item"><a href="notificaciones.html"><i class="fas fa-bell"></i> Notificaciones</a></li>
                     <li class="nav-item"><a href="perfil.html"><i class="fas fa-user-circle"></i> Mi perfil</a></li>
-                    <li class="nav-item"><a href="../templates/salir.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+                    <li class="nav-item"><a href="../salir.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
                 </ul>
             </nav>
         </aside>
@@ -43,28 +44,38 @@
     </div>
 
     <script>
-        // JavaScript para resaltar la página activa
         document.addEventListener('DOMContentLoaded', function() {
             const currentPage = window.location.pathname.split('/').pop();
-            const navItems = document.querySelectorAll('.nav-item a');
+            const navItems = document.querySelectorAll('.nav-item');
             const boletinHeader = document.getElementById('boletin-header');
             
-            // Remover active de todo
-            navItems.forEach(item => {
-                item.parentElement.classList.remove('active');
-            });
-            boletinHeader.classList.remove('active');
-            
-            // Determinar qué página está activa
+            // SI ESTAMOS EN LA PÁGINA PRINCIPAL (index_profesor.html)
             if (currentPage === 'index_profesor.html' || currentPage === '') {
-                // Estamos en la página principal "Mi Boletín"
+                // Activar solo "Mi Boletín"
                 boletinHeader.classList.add('active');
-            } else {
-                // Buscar el enlace correspondiente a la página actual
+                
+                // Asegurarnos que ningún nav-item esté activo
                 navItems.forEach(item => {
-                    const href = item.getAttribute('href');
-                    if (href === currentPage) {
-                        item.parentElement.classList.add('active');
+                    item.classList.remove('active');
+                });
+            } 
+            // SI ESTAMOS EN OTRA PÁGINA (inicio.html, clases.html, etc.)
+            else {
+                // Primero desactivar "Mi Boletín"
+                boletinHeader.classList.remove('active');
+                
+                // Luego buscar y activar la página correcta
+                navItems.forEach(item => {
+                    const link = item.querySelector('a');
+                    if (link) {
+                        const href = link.getAttribute('href');
+                        
+                        // Verificar si este link coincide con la página actual
+                        if (href === currentPage) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
                     }
                 });
             }
