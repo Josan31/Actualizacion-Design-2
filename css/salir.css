@@ -38,7 +38,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Título */
 .logout-container h2 {
     color: #003060;
     margin-bottom: 15px;
@@ -46,16 +45,15 @@ body {
     font-weight: 700;
 }
 
-/* Texto */
 .logout-container p {
     color: #333;
     margin-bottom: 30px;
     font-size: 1.05em;
 }
 
-/* ============================
-   BOTÓN PRINCIPAL
-============================= */
+/* =============================
+   ====== BOTÓN PRINCIPAL ======
+   ============================= */
 
 .btn-primary {
     display: block;

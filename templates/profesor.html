@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Boletín - Panel de Profesor</title>
-   <link rel="stylesheet" href="../css/estudiante.css">
+   <link rel="stylesheet" href="../css/profesor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -29,17 +29,13 @@
         </aside>
 
         <main class="main-content">
+
             <header class="main-header">
-                <button id="menu-toggle" class="menu-toggle-button">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
+
                 <div class="header-path">
                     <i class="fas fa-chalkboard-teacher"></i> Profesor(a)
                 </div>
-                <a href="acerca.html" class="feedback-button">
-                    <i class="fas fa-info-circle"></i> Acerca de
-                </a>
+
             </header>
 
             <div class="module-grid">
@@ -82,20 +78,5 @@
             </section>
         </main>
     </div>
-
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            const toggleButton = document.getElementById('menu-toggle');
-            
-            sidebar.classList.toggle('open');
-            
-            if (sidebar.classList.contains('open')) {
-                toggleButton.innerHTML = '<i class="fas fa-times"></i>';
-            } else {
-                toggleButton.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
-    </script>
 </body>
 </html>

@@ -1,20 +1,6 @@
-/* -------------------------------------- */
-/* 1. Variables y Reset */
-/* -------------------------------------- */
-:root {
-    /* Colores del estilo "MI BOLETÍN" */
-    --color-primary: #002244;       /* Azul oscuro (para Sidebar, Footer conceptual) */
-    --color-accent: #3A8DFF;        /* Azul brillante (para botones, enlaces) */
-    --color-secondary-bg: #F4F7FB;  /* Fondo gris claro (similar al ejemplo) */
-    --color-text-dark: #333333;
-    --color-text-light: #ffffff;
-    --color-success: #1d9b6c;       /* Verde para módulos específicos de EducaCity */
-
-    /* Estilos generales */
-    --border-radius: 10px;
-    --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil para tarjetas */
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* ======================
+   ====== 1. Reset ======
+   ======================*/
 
 * {
     box-sizing: border-box;
@@ -23,9 +9,9 @@
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--color-secondary-bg);
-    color: var(--color-text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F4F7FB;
+    color: #333333;
 }
 
 a {
@@ -33,22 +19,21 @@ a {
     color: inherit;
 }
 
-/* -------------------------------------- */
-/* 2. Layout Principal (Sidebar + Main Content) */
-/* -------------------------------------- */
+/* ==========================================================
+   ====== 2. Layout Principal (Sidebar + Main Content) ======
+   ========================================================== */
 
 .page-container {
     display: flex;
     min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: var(--color-primary); /* Fondo azul oscuro */
-    color: var(--color-text-light);
+    background-color: #002244;
+    color: #ffffff;
     padding: 0;
-    flex-shrink: 0; /* Evita que se encoja */
+    flex-shrink: 0;
 }
 
 .sidebar-header {
@@ -76,20 +61,17 @@ a {
     text-align: center;
 }
 
-/* Estilo de enlace al pasar el mouse */
 .nav-item a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo del elemento activo */
 .nav-item.active a {
-    background-color: var(--color-accent); /* Usa el color de acento para resaltar */
-    color: var(--color-text-light);
+    background-color: #3A8DFF;
+    color: #ffffff;
     border-left: 5px solid white;
     padding-left: 20px;
 }
 
-/* Línea separadora (como en el ejemplo entre Resultados y Pagos) */
 .nav-item.separator {
     margin-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -97,19 +79,17 @@ a {
 }
 
 .logout-link {
-    color: #ffcccc; /* Color de advertencia o contraste para Salir */
+    color: #ffcccc;
 }
 
-
-/* Main Content */
 .main-content {
     flex-grow: 1;
     padding: 30px;
 }
 
-/* -------------------------------------- */
-/* 3. Header y Cards */
-/* -------------------------------------- */
+/* ===============================
+   ====== 3. Header y Cards ======
+   =============================== */
 
 .main-header {
     display: flex;
@@ -126,11 +106,11 @@ a {
 }
 
 .feedback-button {
-    background-color: var(--color-accent);
-    color: var(--color-text-light);
+    background-color: #3A8DFF;
+    color: #ffffff;
     border: none;
     padding: 8px 15px;
-    border-radius: var(--border-radius);
+    border-radius: 10px;
     cursor: pointer;
     font-size: 0.9em;
     transition: background-color 0.2s;
@@ -140,7 +120,6 @@ a {
     background-color: #297be6;
 }
 
-/* Grid de Módulos */
 .module-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -150,22 +129,21 @@ a {
 
 .module-card {
     padding: 25px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-light); /* Aplicando el estilo de sombra sutil del ejemplo */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 150px;
 }
 
-/* Estilos de fondo específicos (simulando los colores originales) */
 .dark-green-bg {
-    background-color: var(--color-success); /* Usamos un verde/azul oscuro */
-    color: var(--color-text-light);
+    background-color: #1d9b6c;
+    color: #ffffff;
 }
 
 .light-bg {
-    background-color: var(--color-text-light);
+    background-color: #ffffff;
     border: 1px solid #eee;
 }
 
@@ -186,9 +164,9 @@ a {
     align-self: flex-start;
 }
 
-/* -------------------------------------- */
-/* 4. Formularios y Botones */
-/* -------------------------------------- */
+/* ======================================
+   ====== 4. Formularios y Botones ======
+   ====================================== */
 
 .form-select {
     width: 100%;
@@ -197,7 +175,7 @@ a {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: white;
-    font-family: var(--font-family);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn {
@@ -211,8 +189,8 @@ a {
 }
 
 .btn-accent {
-    background-color: var(--color-accent);
-    color: var(--color-text-light);
+    background-color: #3A8DFF;
+    color: #ffffff;
 }
 
 .btn-accent:hover {
@@ -220,17 +198,17 @@ a {
 }
 
 .btn-light-inverted {
-    background-color: var(--color-text-light);
-    color: var(--color-success);
+    background-color: #ffffff;
+    color: #1d9b6c;
 }
 
 .btn-light-inverted:hover {
     background-color: #f0f0f0;
 }
 
-/* -------------------------------------- */
-/* 5. Sección Tareas y Alerta */
-/* -------------------------------------- */
+/* ========================================
+   ====== 5. Sección Tareas y Alerta ======
+   ======================================== */
 
 .tasks-section h2 {
     font-size: 1.5em;
@@ -238,15 +216,15 @@ a {
 }
 
 .alert-message {
-    background-color: #e6f7ff; /* Fondo azul claro para la alerta */
-    color: #0077b3; /* Texto azul oscuro */
+    background-color: #e6f7ff;
+    color: #0077b3;
     padding: 15px;
-    border-left: 5px solid var(--color-accent);
-    border-radius: var(--border-radius);
+    border-left: 5px solid #3A8DFF;
+    border-radius: 10px;
     font-size: 0.95em;
     display: flex;
     align-items: center;
-    box-shadow: var(--box-shadow-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .alert-message i {
