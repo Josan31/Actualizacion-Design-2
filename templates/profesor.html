@@ -16,7 +16,7 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li class="nav-item"><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="nav-item"><a href="templates/inicio_profesor.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li class="nav-item active"><a href="#"><i class="fas fa-users"></i> Mis Clases</a></li>
                     <li class="nav-item"><a href="#"><i class="fas fa-file-alt"></i> Calificaciones</a></li>
                     <li class="nav-item"><a href="#"><i class="fas fa-upload"></i> Subir Material</a></li>
@@ -30,53 +30,25 @@
 
         <main class="main-content">
 
-            <header class="main-header">
+            <section class="empty-section">
 
-                <div class="header-path">
-                    <i class="fas fa-chalkboard-teacher"></i> Profesor(a)
+                <div class="empty-content">
+                    <i class="fas fa-exclamation-circle empty-icon"></i>
+
+                    <h2 class="empty-title">Selecciona un apartado para comenzar</h2>
+
+                    <p class="empty-subtitle">
+                        Usa el menú lateral para navegar entre tus funciones como profesor(a).
+                    </p>
+
+                    <!-- Aquí va TU imagen -->
+                    <img src="../img/undraw_teacher_s628.svg" alt="Imagen decorativa" class="empty-image">
+
                 </div>
 
-            </header>
-
-            <div class="module-grid">
-                <div class="module-card dark-green-bg card-large">
-                    <h3 class="card-title">Cargar Notas Pendientes</h3>
-                    <p class="card-info">Seleccione el curso y el periodo para comenzar la carga masiva de calificaciones.</p>
-                    <select class="form-select">
-                        <option>10-01 | Matemáticas</option>
-                        <option>11-02 | Física</option>
-                        <option>9-03 | Geometría</option>
-                    </select>
-                    <button class="btn btn-light-inverted">
-                        <i class="fas fa-cloud-upload-alt"></i> Cargar Archivo
-                    </button>
-                </div>
-
-                <div class="module-card light-bg">
-                    <h3 class="card-title">Mensajes Recientes</h3>
-                    <p class="card-info">3 mensajes nuevos de estudiantes y 1 de coordinación.</p>
-                    <button class="btn btn-accent">
-                        <i class="fas fa-envelope"></i> Ver Bandeja
-                    </button>
-                </div>
-
-                <div class="module-card dark-green-bg">
-                    <p class="card-title">Próxima Clase</p>
-                    <p class="card-info">10-01 Matemáticas</p>
-                    <p class="card-info">Hoy, 3:00 p.m. - 4:00 p.m.</p>
-                    <button class="btn btn-light-inverted">Detalles</button>
-                </div>
-            </div>
-
-            <section class="tasks-section">
-                <h2>Actividades de Gestión Pendientes</h2>
-                <div class="alert-message warning-alert">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    
-                </div>
-                
             </section>
-        </main>
+        </main>    
+
     </div>
 </body>
 </html>
