@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Clases - Mi Boletín</title>
+    <link rel="stylesheet" href="../css/profesor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <aside class="sidebar">
+            <a href="index_profesor.html" class="sidebar-header">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Mi Boletín
+            </a>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item"><a href="inicio_profesor.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="nav-item active"><a href="mis_clases.html"><i class="fas fa-users"></i> Mis Clases</a></li>
+                    <li class="nav-item"><a href="calificaciones.html"><i class="fas fa-file-alt"></i> Calificaciones</a></li>
+                    <li class="nav-item"><a href="subir_material.html"><i class="fas fa-upload"></i> Subir Material</a></li>
+                    <li class="nav-item"><a href="agenda.html"><i class="fas fa-calendar-alt"></i> Agenda</a></li>
+                    <li class="nav-item"><a href="notificaciones.html"><i class="fas fa-bell"></i> Notificaciones</a></li>
+                    <li class="nav-item"><a href="perfil.html"><i class="fas fa-user-circle"></i> Mi perfil</a></li>
+                    <li class="nav-item"><a href="salir.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Header específico de la página -->
+            <header class="main-header">
+                <div class="header-path">
+                    <span>Mis Clases</span>
+                </div>
+                <button class="feedback-button">
+                    <i class="fas fa-comment"></i> Enviar Feedback
+                </button>
+            </header>
+
+            <!-- Contenido específico de Mis Clases -->
+            <div class="module-grid">
+                <div class="module-card dark-green-bg">
+                    <i class="fas fa-book card-icon"></i>
+                    <div>
+                        <h3 class="card-title">Matemáticas 10°</h3>
+                        <p class="card-info">25 estudiantes</p>
+                    </div>
+                </div>
+                
+                <div class="module-card light-bg">
+                    <i class="fas fa-flask card-icon" style="color: #1d9b6c;"></i>
+                    <div>
+                        <h3 class="card-title">Ciencias 9°</h3>
+                        <p class="card-info">30 estudiantes</p>
+                    </div>
+                </div>
+                
+                <div class="module-card light-bg">
+                    <i class="fas fa-language card-icon" style="color: #3A8DFF;"></i>
+                    <div>
+                        <h3 class="card-title">Español 8°</h3>
+                        <p class="card-info">28 estudiantes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo de formulario -->
+            <div class="form-section">
+                <h2>Añadir Nueva Clase</h2>
+                <select class="form-select">
+                    <option>Seleccionar materia</option>
+                    <option>Matemáticas</option>
+                    <option>Ciencias</option>
+                    <option>Español</option>
+                </select>
+                <button class="btn btn-accent">
+                    <i class="fas fa-plus"></i> Crear Clase
+                </button>
+            </div>
+        </main>    
+    </div>
+
+    <script>
+        // Mismo script para resaltar la página activa
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navItems = document.querySelectorAll('.nav-item a');
+            const boletinHeader = document.querySelector('.sidebar-header');
+            
+            navItems.forEach(item => {
+                item.parentElement.classList.remove('active');
+            });
+            boletinHeader.classList.remove('active');
+            
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href === currentPage) {
+                    item.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
