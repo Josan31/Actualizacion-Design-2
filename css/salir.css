@@ -1,0 +1,78 @@
+/* =====================================
+   ====== ESTILOS BASE Y RESETEOS ======
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef3f8; 
+    padding: 20px;
+}
+
+/* ==================================
+   ====== CONTENEDOR PRINCIPAL ======
+   ================================== */
+
+.logout-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    max-width: 450px;
+    width: 100%;
+}
+
+.logout-icon {
+    font-size: 3.2em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Título */
+.logout-container h2 {
+    color: #003060;
+    margin-bottom: 15px;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+/* Texto */
+.logout-container p {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.05em;
+}
+
+/* ============================
+   BOTÓN PRINCIPAL
+============================= */
+
+.btn-primary {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 14px;
+    background-color: #2f89ff;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: 0.25s;
+}
+
+.btn-primary:hover {
+    background-color: #1673e6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+}
